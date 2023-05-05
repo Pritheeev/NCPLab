@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Animal Image Fetcher</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <center>
+                <h1 class="head">Animal Image Fetcher</h1>
+                <h3>Enter the name of the Animal</h3>
+                <img id="image" src="https://images.vexels.com/media/users/3/152594/isolated/preview/d00d116b2c073ccf7f9fec677fec78e3-purple-square-question-mark-icon.png" width="300px" height="300px"/>
+                <input type="text" class="form-control" id="name"/>
+                <button onclick="fetchImage()" class="btn btn-lg primary" id="button">Fetch Image</button>
+            </center>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
