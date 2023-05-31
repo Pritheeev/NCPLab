@@ -1,0 +1,32 @@
+.head {
+}
+
+img 
+{
+    margin-bottom: 20px;
+    border-radius: 5%;
+}
+
+.form-control
+{
+    width: 300px!important;
+    margin-bottom: 20px!important;   
+}
+
+body
+{
+    background-color: navajowhite!important;
+}
+
+.jumbotron
+{
+    margin-top: 100px!important;
+    width: 80%!important;
+    margin-left: 10%!important;
+}
+
+.btn 
+{
+    background-color: dodgerblue!important;
+    color: white!important;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Navbar and User Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+  <style>
+    body
+    {
+        background-color: lemonchiffon;
+    }
+    .container 
+    {
+        margin-top: 5%;
+        width: 50%!important;
+    }
+    #submit 
+    {
+        margin-top: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .h {
+        width: 47%;
+        float: left;
+    }
+    .w {
+        width: 47%;
+        float: right;
+    }
+    .g {
+        width: 47%;
+        float: left;
+    }
+    .ac {
+        width: 47%;
+        float: right;
+    }
+    .n {
+        width: 47%;
+        float: left;
+    }
+    .a {
+        width: 47%;
+        float: right;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">Meal Planner</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Meal Plan and Recipe</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Daily Calorie Calculation</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Meal Plan Generation</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <center><h2>Meal Planner</h2></center>
+    <div style="margin-top: 20px;">
+    <div class="form-group n">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+    </div>
+    <div class="form-group a">
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" placeholder="Enter your age" required>
+      </div>
+    </div>
+    <div>
+    <div class="form-group h">
+      <label for="height">Height:</label>
+      <input type="number" class="form-control" id="height" placeholder="Enter your height" required>
+    </div>
+    <div class="form-group w">
+      <label for="weight">Weight:</label>
+      <input type="number" class="form-control" id="weight" placeholder="Enter your weight" required>
+    </div>
+    </div>
+    <div>
+    <div class="form-group g">
+        <label for="gender">Gender:</label>
+        <select class="form-control" id="gender" required>
+          <option value="">Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+    </div>
+    <div class="form-group ac">
+        <label for="activity">Activity Level:</label>
+        <select class="form-control" id="activity" required>
+          <option value="">Select your Activity Level</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+    </div>
+    </div>
+    <center><button id="submit" onclick="generateMeal()" class="btn btn-primary">Generate Meals</button></center>
+    <div style="margin-top: 5%;">
+        <h5 id="result">
+        </h5>
+    </div>
+</div>
+
+</body>
+</html>
