@@ -1,4 +1,4 @@
-function MyApp(props) 
+function Title() 
 {
   return (
   <div>
@@ -7,38 +7,114 @@ function MyApp(props)
   );
 }
 
-function MyList(props) 
+function InputContainer()
 {
-  const listItems = []
-  for (var i=0; i < props.listItems.length; i++) 
-  {
-    listItems.push(
-    <div key={i}>
-      <input className="form-check-input" onChange={handleClick(i)} type="checkbox" value={props.listItems[i]} checked={props.status[i]}/>
-      <label className="form-check-label">{props.listItems[i]}</label>
-    </div>
-    )
-  }
-
   return (
-  <div>
-    <h2>
-      {listItems}
-    </h2>
-  </div>
-  );
+    <div>
+    <div className="input-group mb-3 add-task">
+      <input type="text" className="form-control" placeholder="Enter the Task"/>
+      <button className="btn btn-outline-secondary" onClick={taskAdded} type="button" id="button-addon2">Add Task</button>
+    </div>
+    </div>
+  )
 }
 
-function handleClick(i)
+function taskAdded()
 {
-  alert(i);
+  console.log('button is clicked');
 }
 
-var listItems = ['Do the Assignment', 'Finish the Homework', 'Complete the Certifications'];
-var status = ['false', 'false', 'false'];
+function checkBox()
+{
+  return (
+    <div className="form-check">
+      <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+      <label className="form-check-label" for="flexCheckDefault">
+        Default checkbox
+      </label>
+    </div>
+  )
+}
+
+function ToDoContainer()
+{
+  return (
+    <div style={{width: '45%', float: 'left'}}>
+      <div>
+        <center><h3>ToDo Tasks</h3></center>
+      </div>
+      <div className="todo-tasks">
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+          <label className="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+          <label className="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+          <label className="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+          <label className="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function CompletedContainer()
+{
+  return (
+    <div style={{width: '45%', float: 'right'}}>
+      <div>
+        <center><h3>Completed Tasks</h3></center>
+      </div>
+      <div className="todo-tasks">
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+          <label className="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+          <label className="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+          <label className="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+        <div className="form-check">
+          <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+          <label className="form-check-label" for="flexCheckDefault">
+            Default checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
-root.render([<MyApp name="Rajasekar M" />,
-<MyList status={status} listItems={listItems} />]);
+root.render([
+<Title/>,
+<InputContainer/>,
+(<div><ToDoContainer/><CompletedContainer/></div>)
+]);
